@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>File Icon Generator</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const App = () => {
+        return (
+          <main>
+            <h1>File Icon Generator</h1>
+            <p>API for generate file icon</p>
+            <div>
+              <img src="https://file-icon-generator.kedama-t99.workers.dev/api" />
+              <img src="https://file-icon-generator.kedama-t99.workers.dev/api?text=HTML&color=c2410c&badge=checked" />
+              <img src="https://file-icon-generator.kedama-t99.workers.dev/api?text=JavaScript&color=eab308&badge=crossmark" />
+            </div>
+            <h2>Usage</h2>
+            <pre>https://file-icon-generator.kedama-t99.workers.dev/api</pre>
+            <p>
+              Send <code>GET</code> request for this endpoint with some query
+              parameters.
+            </p>
+            <h2>Query Parameters</h2>
+            <h3>text : string</h3>
+            <p>Text on the badge.(default : "File")</p>
+            <pre>
+              https://file-icon-generator.kedama-t99.workers.dev/api?text=TEXT
+            </pre>
+            <p>
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?text=TEXT"
+                width="100"
+              />
+            </p>
+            <h3>color : string(hex color code)</h3>
+            <p>Hex color code without hash("#").(default : "2563eb")</p>
+            <pre>
+              https://file-icon-generator.kedama-t99.workers.dev/api?color=ea580c
+            </pre>
+            <p>
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?color=ea580c"
+                width="100"
+              />
+            </p>
+            <h3>font : string</h3>
+            <p>Font for the text on the badge.(default : "Menlo,Consolas")</p>
+            <pre>
+              https://file-icon-generator.kedama-t99.workers.dev/api?font='BIZ
+              UDGothic'
+            </pre>
+            <p>
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?font='BIZ UDGothic'"
+                width="100"
+              />
+            </p>
+            <h3>
+              badge : "none" | "checked" | "crossmark" | "arrowup" | "arrowdown"
+            </h3>
+            <p>Show a badge on bottom-right edge.(default : "none")</p>
+            <pre>
+              https://file-icon-generator.kedama-t99.workers.dev/api?badge=checked
+              https://file-icon-generator.kedama-t99.workers.dev/api?badge=crossmark
+              https://file-icon-generator.kedama-t99.workers.dev/api?badge=arrowup
+              https://file-icon-generator.kedama-t99.workers.dev/api?badge=arrowdown
+            </pre>
+            <p>
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?badge=checked"
+                width="100"
+              />
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?badge=crossmark"
+                width="100"
+              />
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?badge=arrowup"
+                width="100"
+              />
+              <img
+                src="https://file-icon-generator.kedama-t99.workers.dev/api?badge=arrowdown"
+                width="100"
+              />
+            </p>
+          </main>
+        );
+      };
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+    </script>
+  </body>
+</html>
