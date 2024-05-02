@@ -1,8 +1,3 @@
-```
-npm install
-npm run dev
-```
+# File Icon Generator
 
-```
-npm run deploy
-```
+See https://kedama-t.github.io/file-icon-generator/
