@@ -63,7 +63,7 @@
               <h4>
                 <label htmlFor="type">Type</label>
               </h4>
-              <select name="type" id="type">
+              <select name="type" id="type" onChange={handleChange}>
                 <option value="">--Please choose File Type--</option>
                 <option value="text">Text</option>
                 <option value="image">Image</option>
@@ -102,7 +102,7 @@
               <h4>
                 <label htmlFor="badge">Badge</label>
               </h4>
-              <select name="badge" id="badge">
+              <select name="badge" id="badge" onChange={handleChange}>
                 <option value="">--Please choose a badge--</option>
                 <option value="checked">Checked</option>
                 <option value="crossmark">CrossMark</option>
